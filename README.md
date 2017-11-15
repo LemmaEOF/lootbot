@@ -4,16 +4,17 @@ Lootboxes sans bullshit!
 
 ## Features
 
-LootBot lets you simulate the random fun of lootboxes without having to sell your soul to capitalism. It's fully customizable through JSON files.
+**LootBot** lets you simulate the random fun of lootboxes without having to sell your soul to capitalism. It's fully customizable through JSON files.
 
 In development:
 - [ ] Drop rarities
+- *fake-money cost for loot boxes will likely never be added*, because it would be too easy for someone to turn into actually having to pay real money for lootboxes. If it does get added, it will only be obtainable through the bot itself; server admins can't give it out.
 
 ## Setup
 
 Install like any NodeJS project: clone or download the repository then run `npm install`.
 
-Next, copy `config_default.json` into `config.json` and put your Discord API key (from https://discordapp.com/developers/applications) into the place of `"put_your_api_key_here"`.
+Next, duplicate `config_default.json` and rename it `config.json`, then put your Discord API key (from an application created from https://discordapp.com/developers/applications **making sure it's a bot user**) into the place of `"put_your_api_key_here"`.
 
 Run the bot with `node bot.js`.
 
@@ -66,6 +67,6 @@ A server config may be something like this:
 }
 ```
 
-The `Box 1` in the server config overrides the `Box 1` in the global config, so for the magic RPG server, they will only be able to get drops 4, 5, and 6 from `Box 1`.
+The `Box 1` in the server config overrides the `Box 1` in the global config, so for the magic RPG server, they will only be able to get drops 4, 5, and 6 from `Box 1`. `Magic Box` will only be openable in the magic RPG server.
 
 Server configs will also contain the server's `id` and `lastKnownName`, so the server can be better identified. `lastKnownName` will be updated as the server's name is updated, so you can tell what server it is without having to remember the server ID.
