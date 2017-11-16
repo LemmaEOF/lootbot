@@ -2,8 +2,8 @@
  * LOOT - Open or check loot boxes.
  */
 
-let botConfig = require("/config.json");
-let serverConfig = require("/server_config.js");
+let botConfig = require("../config.json");
+let serverConfig = require("../server_config.js");
 
 /*let help = "**Boxes**\n";
 help += "Open or check loot boxes.\n";
@@ -57,7 +57,7 @@ commandHandlers.boxes = function (message, args) {
 
   getBoxes(message.guild.id, function (boxes) {
 
-    if (typeof pastas === "object" && Object.keys(Boxes).length > 0) {
+    if (typeof boxes === "object" && Object.keys(boxes).length > 0) {
 
       message.channel.send("```" + Object.keys(boxes) + "```");
 

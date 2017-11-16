@@ -8,7 +8,7 @@ const serverConfig = require('./server_config.js');
 let modules = {};
 
 
-modules.rationals = require('./bot_modules/loot.js');
+modules.loot = require('./bot_modules/loot.js');
 
 //not sure if I'm going to have help or not
 //let help = "lootbot v1.0\n";
